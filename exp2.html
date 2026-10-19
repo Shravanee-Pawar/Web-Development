@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Boxes</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Popup Boxes</h2>
+
+    <!-- Display Date -->
+    <input type="text" id="dateBox" size="40">
+
+    <button id="dateBtn" onclick="showDate()">
+        Display Date
+    </button>
+
+    <br><br>
+
+    <button onclick="factorial()">Factorial</button>
+
+    <button onclick="table()">Multiplication Table</button>
+
+    <button onclick="sumNumbers()">Sum of Numbers</button>
+
+    <script>
+        // A. Display today's date
+        function showDate() {
+            document.getElementById("dateBox").value = new Date();
+        }
+
+        document.getElementById("dateBtn").click();
+
+        // B. Factorial of a number
+        function factorial() {
+            let n = parseInt(prompt("Enter a number:"));
+            let fact = 1;
+
+            for (let i = 1; i <= n; i++) {
+                fact = fact * i;
+            }
+
+            alert("Factorial of " + n + " is " + fact);
+        }
+
+        // C. Multiplication table
+        function table() {
+            let n = parseInt(prompt("Enter a number:"));
+            let result = "";
+
+            for (let i = 1; i <= 10; i++) {
+                result = result + n + " x " + i + " = " + (n * i) + "\n";
+            }
+
+            alert(result);
+        }
+
+        // D. Sum of numbers
+        function sumNumbers() {
+            let sum = 0;
+            let more = true;
+
+            while (more) {
+                let n = parseInt(prompt("Enter a number:"));
+
+                sum = sum + n;
+
+                more = confirm("Do you want to add another number?");
+            }
+
+            alert("Total sum = " + sum);
+        }
+    </script>
+
+</body>
+</html>

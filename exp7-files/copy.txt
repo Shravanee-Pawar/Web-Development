@@ -1,0 +1,14 @@
+Hello Node.js
+This line is appended
+
+OUTPUT:
+#File renamed to newdemo.txt
+#Buffer: <Buffer 48 65 6c 6c 6f>
+#Length: 5
+#To string: Hello
+#After write: Jello
+#Chunk received: Hello Node.js
+#This line is appended
+
+#Reading finished. copy.txt created.
+#newdemo.txt deleted 
